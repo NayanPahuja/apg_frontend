@@ -1,3 +1,5 @@
+const BACKEND_URL = "https://aquapix-api.pahujanayan.tech/enhance"
+
 function previewImage() {
     const fileInput = document.getElementById('imageUpload');
     const previewArea = document.getElementById('previewArea');
@@ -27,7 +29,7 @@ function uploadImage() {
     const imageData = new FormData();
     imageData.append('file', fileInput.files[0]);
 
-    fetch('http://98.70.76.134:8000/enhance', {
+    fetch(BACKEND_URL, {
         method: 'POST',
         body: imageData
     })
