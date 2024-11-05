@@ -29,7 +29,9 @@ function uploadImage() {
 
     fetch('http://98.70.76.134:8000/enhance', {
         method: 'POST',
+        referrerPolicy: "unsafe-url",
         body: imageData,
+        
     })
     .then(response => response.blob())
     .then(blob => {
