@@ -1,0 +1,175 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url('/background.jpeg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* For the overlay */
+}
+
+/* Optional dark overlay to improve text readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darken background */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #00d4ff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #002840;
+}
+
+p {
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.upload-btn {
+    background-color: #00b7c2;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.upload-btn:hover {
+    background-color: #00d4ff;
+}
+
+.enhance-btn {
+    background-color: #007f91;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.enhance-btn:hover {
+    background-color: #005f6b;
+}
+
+/* Preview and Result Sections */
+.preview-section, .result-section {
+    background-color: #00476b;
+    border: 2px solid #00b7c2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.preview-section:hover, .result-section:hover {
+    box-shadow: 0 5px 15px rgba(0, 191, 213, 0.5);
+}
+
+.preview-section img, .result-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Loader Styles */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #00d4ff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1.5s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .upload-btn, .enhance-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .preview-section, .result-section {
+        padding: 15px;
+        min-height: 150px;
+    }
+}
+
+.reset-btn {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background-color: #ff6666;
+}

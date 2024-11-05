@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Pix GAN Image Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aqua Pix GAN</h1>
+            <p>Enhance your underwater images using AI-powered technology.</p>
+        </header>
+        
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-btn">Choose an Underwater Image</label>
+            <input type="file" id="imageUpload" accept="image/*" onchange="previewImage()" hidden>
+            <button onclick="uploadImage()" class="enhance-btn">Enhance Image</button>
+            <button onclick="resetImage()" class="reset-btn">Reset</button> <!-- New Reset Button -->
+        </div>
+        
+        
+        <div id="previewArea" class="preview-section">
+            <p>No image selected</p>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader hidden"></div>
+        <div id="processingText" class="hidden">Processing...</div>
+
+        <div id="resultArea" class="result-section">
+            <p>Enhanced image will be displayed here</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
