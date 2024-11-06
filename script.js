@@ -1,6 +1,5 @@
 const BACKEND_URL = "https://aquapix-api.pahujanayan.tech/enhance"
 
-
 function previewImage() {
     const fileInput = document.getElementById('imageUpload');
     const previewArea = document.getElementById('previewArea');
@@ -22,6 +21,7 @@ function uploadImage() {
     const resultArea = document.getElementById('resultArea');
     const loader = document.getElementById('loader');
     const processingText = document.getElementById('processingText');
+    const downloadBtn = document.getElementById('downloadBtn');
     
     // Show loader and processing message
     loader.classList.remove('hidden');
@@ -43,6 +43,10 @@ function uploadImage() {
         // Convert blob to an image and display
         const imageUrl = URL.createObjectURL(blob);
         resultArea.innerHTML = `<img src="${imageUrl}" alt="Enhanced Image">`;
+
+        // Show download button
+        downloadBtn.classList.remove('hidden');
+        downloadBtn.onclick = () => downloadImage(imageUrl);
     })
     .catch(error => {
         console.error('Error enhancing the image:', error);
@@ -52,12 +56,20 @@ function uploadImage() {
     });
 };
 
+function downloadImage(imageUrl) {
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = 'enhanced_image.jpg';
+    link.click();
+}
+
 function resetImage() {
     const fileInput = document.getElementById('imageUpload');
     const previewArea = document.getElementById('previewArea');
     const resultArea = document.getElementById('resultArea');
     const loader = document.getElementById('loader');
     const processingText = document.getElementById('processingText');
+    const downloadBtn = document.getElementById('downloadBtn');
 
     fileInput.value = '';  // Reset file input
     previewArea.innerHTML = '<p>No image selected</p>';  // Clear preview area
@@ -65,4 +77,5 @@ function resetImage() {
     
     loader.classList.add('hidden');
     processingText.classList.add('hidden');
+    downloadBtn.classList.add('hidden');
 }

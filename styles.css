@@ -60,7 +60,7 @@ p {
     margin-bottom: 40px;
 }
 
-.upload-btn {
+.upload-btn, .enhance-btn, .reset-btn, .download-btn {
     background-color: #00b7c2;
     color: #ffffff;
     padding: 12px 25px;
@@ -69,29 +69,37 @@ p {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 10px;
     margin-bottom: 15px;
     transition: background-color 0.3s ease-in-out;
 }
 
-.upload-btn:hover {
+.upload-btn:hover, .enhance-btn:hover, .reset-btn:hover, .download-btn:hover {
     background-color: #00d4ff;
 }
 
 .enhance-btn {
     background-color: #007f91;
-    color: #ffffff;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 10px;
 }
 
 .enhance-btn:hover {
     background-color: #005f6b;
+}
+
+.reset-btn {
+    background-color: #ff4d4d;
+}
+
+.reset-btn:hover {
+    background-color: #ff6666;
+}
+
+.download-btn {
+    background-color: #4CAF50;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
 }
 
 /* Preview and Result Sections */
@@ -146,7 +154,7 @@ p {
         font-size: 2rem;
     }
 
-    .upload-btn, .enhance-btn {
+    .upload-btn, .enhance-btn, .reset-btn, .download-btn {
         padding: 10px 20px;
         font-size: 1rem;
     }
@@ -155,21 +163,4 @@ p {
         padding: 15px;
         min-height: 150px;
     }
-}
-
-.reset-btn {
-    background-color: #ff4d4d;
-    color: #ffffff;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 10px;
-}
-
-.reset-btn:hover {
-    background-color: #ff6666;
 }
