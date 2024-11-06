@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://aquapix-api.pahujanayan.tech/enhance"
+import {BACKEND_URL} from "./config.js"
 
 function previewImage() {
     const fileInput = document.getElementById('imageUpload');
