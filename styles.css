@@ -148,6 +148,24 @@ p {
     display: none;
 }
 
+.sample-btn {
+    background-color: #ffb300;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.sample-btn:hover {
+    background-color: #ffcc33;
+}
+
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     h1 {
